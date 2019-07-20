@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript">
+    function calculate(){
+        var p = 0;
+        var r=0;
+        var t= 0;
+        var si = 0;
+        p = parseInt(document.getElementById("principal").value);
+        t= parseInt(document.getElementById("years").value);
+        r = parseInt(document.getElementById("rate").value);
+        si = (p*r*t)/100;
+        document.getElementById("res").innerHTML=si;
+    }
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-s-12">
+            <h1>Simple Interest Calculator</h1>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-s-12">
+<form>
+    <div class="form-group">
+        <label class="form-group">Principal</label>
+        <input class="form-control" type="text" id="principal">
+    </div>
+    <div class="form-group">
+        <label class="form-group">Years</label>
+        <input class="form-control" type="text" id="years">
+    </div>
+    <div class="form-group">
+        <label class="form-group">Rate Of Interest</label>
+        <input class="form-control" type="text" id="rate">
+
+    </div>
+    <button class="btn btn-primary" type="button" onClick="calculate()">Calculate</button>
+</form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-s-12">
+            <h1 id="res">$</h1>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
